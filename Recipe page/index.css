@@ -1,0 +1,175 @@
+/* Importing Young Serif and Outfit fonts */    
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif:wght@400&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+h1, h2, h3 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400; 
+}
+
+h2 {
+    color: var(--brown-800);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400; /* Regular */
+    background-color: var(--stone-100);
+}
+
+.card {
+    width: 800px;
+    height: 100%;
+    display: inline-block;
+    margin-left: 30%;
+    margin-right: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: var(--white);
+    justify-content: center;
+}
+
+.inner-border {
+    margin: 30px;
+}
+
+img {
+    width: 100%;  
+    border-radius: 9px;
+}
+
+/* Preparation section styling */
+.preparation {
+    background-color: var(--rose-50);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styling the h2 */
+.preparation h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--rose-800);
+    font-size: 20px;
+    line-height: 1.2; /* Adjusted for readability */
+}
+
+/* Styling the ul and li */
+.preparation ul {
+    list-style-position: inside; 
+    padding-left: 0; /* Removes extra indentation */
+}
+
+.preparation li {
+    color: var(--stone-900); /* Text color for li */
+    line-height: 1.6; /* Better spacing between list items */
+}
+
+/* Changing the color of the list dots */
+.preparation li::marker {
+    color: var(--rose-800); /* Color of the list dots */
+}
+
+/* Aligning h2 and ul content */
+.preparation ul, .preparation h2 {
+    display: block; 
+}
+
+/* Ingredients section styling */
+.Ingredients li::marker {
+    color: var(--brown-800);
+    line-height: 1.8;
+}
+
+.Ingredients ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* horizontal tag */
+hr {
+    border: none;
+    height: 1px; /* Adjust thickness */
+    background-color: grey; /* Set grey color */
+    margin: 20px 0; /* Optional: adjust spacing */
+    opacity: 0.5;
+}
+
+/* Instructions */
+.Instructions li {
+    padding-left: 10px; /* Adds space between the number and the text */
+}
+
+.Instructions li::marker {
+    color: var(--brown-800);
+    font-weight: bold;
+}
+
+.Instructions ol {
+    padding-left: 20px; /* No padding for the ordered list itself */
+    line-height: 1.6;
+}
+
+/* Nutrition */
+.Nutrition table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between borders */
+}
+
+.Nutrition table td {
+    padding: 1rem;
+}
+
+/* Adding horizontal lines to specific rows */
+.Nutrition table tr:nth-child(1) td,
+.Nutrition table tr:nth-child(2) td,
+.Nutrition table tr:nth-child(3) td {
+    border-bottom: 1px solid grey; /* Adds horizontal lines only to the first three rows */
+}
+
+.Nutrition table td b {
+    color: var(--brown-800); /* Changes the text color for nutritional values */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Styles */
+@media screen and (max-width: 375px) {
+    .card {
+        width: 90%; /* Full width on mobile */
+        /* margin-left: 5%; /* Centering */
+        /* margin-right: 5%;  */
+    }
+    
+    .preparation {
+        height: auto; /* Adjust height for mobile */
+    }
+    
+    h2 {
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1440px) {
+    .card {
+        width: 800px; /* Keep width for desktop */
+        /* margin-left: auto; 
+        margin-right: auto;  */
+    }
+}
